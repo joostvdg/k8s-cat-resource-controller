@@ -1,8 +1,7 @@
 package v1
 
 import (
-	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"github.com/joostvdg/cat/application"
+    meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
@@ -31,7 +30,12 @@ type CatManifestSpec struct {
 	// Message and SomeValue are example custom spec fields
 	//
 	// this is where you would put your custom resource data
-    application.Application
+    Name        string        `json:"name"`
+    Description string        `json:"description"`
+    UUID        string        `json:"uuid"`
+    Namespace   string        `json:"namespace"`
+    ArtifactIDs []string      `json:"artifactIDs"`
+    Sources     []string      `json:"sources"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
