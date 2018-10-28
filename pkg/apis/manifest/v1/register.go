@@ -12,7 +12,7 @@ import (
 // GroupVersion is the identifier for the API which includes
 // the name of the group and the version of the API
 var SchemeGroupVersion = schema.GroupVersion{
-	Group:   catmanifest.GroupName,
+	Group:   manifest.GroupName,
 	Version: "v1",
 }
 
@@ -29,8 +29,8 @@ func Resource(resource string) schema.GroupResource {
 func addKnownTypes(scheme *runtime.Scheme) error {
 	scheme.AddKnownTypes(
 		SchemeGroupVersion,
-		&CatManifest{},
-		&CatManifestList{},
+		&Manifest{},
+		&ManifestList{},
 	)
 
 	// register the type in the scheme
