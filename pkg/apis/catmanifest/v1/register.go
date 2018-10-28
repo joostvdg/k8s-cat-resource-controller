@@ -1,17 +1,18 @@
 package v1
 
 import (
-	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+    meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/joostvdg/k8s-cat-resource-controller/pkg/apis/catman"
+	"github.com/joostvdg/k8s-cat-resource-controller/pkg/apis/catmanifest"
 )
 
 // GroupVersion is the identifier for the API which includes
 // the name of the group and the version of the API
 var SchemeGroupVersion = schema.GroupVersion{
-	Group:   catman.GroupName,
+	Group:   catmanifest.GroupName,
 	Version: "v1",
 }
 

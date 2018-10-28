@@ -1,3 +1,3 @@
-package catman
+package catmanifest
 
 const GroupName = "kearos.net"
