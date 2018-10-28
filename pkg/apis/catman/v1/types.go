@@ -30,12 +30,13 @@ type CatManifestSpec struct {
 	// Message and SomeValue are example custom spec fields
 	//
 	// this is where you would put your custom resource data
-    Name        string        `json:"name"`
-    Description string        `json:"description"`
-    UUID        string        `json:"uuid"`
-    Namespace   string        `json:"namespace"`
-    ArtifactIDs []string      `json:"artifactIDs"`
-    Sources     []string      `json:"sources"`
+    Message string `json:"message"`
+    //Name        string        `json:"name"`
+    //Description string        `json:"description"`
+    //UUID        string        `json:"uuid"`
+    //Namespace   string        `json:"namespace"`
+    //ArtifactIDs []string      `json:"artifactIDs"`
+    //Sources     []string      `json:"sources"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
