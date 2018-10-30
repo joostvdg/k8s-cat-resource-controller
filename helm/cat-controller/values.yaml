@@ -1,0 +1,24 @@
+# Default values for mychart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+component: controller
+partOf: cat
+
+replicaCount: 1
+
+image:
+    repository: caladreas
+    name: cat-controller
+    tag: latest
+    pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+resources:
+    limits:
+        cpu: 0.1
+        memory: 20Mi
+    requests:
+        cpu: 0.1
+        memory: 20Mi

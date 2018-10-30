@@ -1,0 +1,14 @@
+apiVersion: kearos.net/v1
+kind: Manifest
+metadata:
+    name: manifest-cat
+spec:
+    name: cat
+    description: Central Application Tracker
+    namespace: cat
+    artifactIDs:
+        - github.com/joostvdg/cat
+    sources:
+        - git@github.com:joostvdg/cat-nip.git
+
+
