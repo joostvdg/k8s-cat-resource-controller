@@ -36,6 +36,9 @@ by Thomas Stringer.
 ## Bugs & TODOs
 
 * if namespace is not default, service account has no access to manifest resource
+* add to GitOps pipeline
+* write all the articles
+* write to a pub/sub queue - Redis?
 
 ## Resources
 
