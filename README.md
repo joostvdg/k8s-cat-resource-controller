@@ -33,6 +33,10 @@ by Thomas Stringer.
     * `hack/update-codegen.sh`
     * `hack/verify-codegen.sh`
 
+## Bugs & TODOs
+
+* if namespace is not default, service account has no access to manifest resource
+
 ## Resources
 
 * https://engineering.bitnami.com/articles/kubewatch-an-example-of-kubernetes-custom-controller.html

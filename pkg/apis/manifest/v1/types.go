@@ -1,7 +1,7 @@
 package v1
 
 import (
-    meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
@@ -30,12 +30,12 @@ type ManifestSpec struct {
 	// Message and SomeValue are example custom spec fields
 	//
 	// this is where you would put your custom resource data
-    Name        string        `json:"name"`
-    Description string        `json:"description"`
-    UUID        string        `json:"uuid"`
-    Namespace   string        `json:"namespace"`
-    ArtifactIDs []string      `json:"artifactIDs"`
-    Sources     []string      `json:"sources"`
+	Name        string   `json:"name"`
+	Description string   `json:"description"`
+	UUID        string   `json:"uuid"`
+	Namespace   string   `json:"namespace"`
+	ArtifactIDs []string `json:"artifactIDs"`
+	Sources     []string `json:"sources"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

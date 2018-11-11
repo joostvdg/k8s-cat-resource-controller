@@ -1,10 +1,10 @@
 package v1
 
 import (
-    meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"github.com/joostvdg/k8s-cat-resource-controller/pkg/apis/manifest"
+	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"github.com/joostvdg/k8s-cat-resource-controller/pkg/apis/manifest"
 )
 
 // GroupVersion is the identifier for the API which includes
@@ -14,7 +14,6 @@ var SchemeGroupVersion = schema.GroupVersion{
 	Version: "v1",
 }
 
-
 // create a SchemeBuilder which uses functions to add types to
 // the scheme
 // The original statement directly gathered the AddToScheme from the
@@ -22,15 +21,13 @@ var SchemeGroupVersion = schema.GroupVersion{
 // for some reason that doesn't work. Doing it via the intermediate variable does work.
 // I'm puzzled.
 var (
-   schemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)
-   AddToScheme   = schemeBuilder.AddToScheme
+	schemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)
+	AddToScheme   = schemeBuilder.AddToScheme
 )
-
 
 func Resource(resource string) schema.GroupResource {
 	return SchemeGroupVersion.WithResource(resource).GroupResource()
 }
-
 
 // addKnownTypes adds our types to the API scheme by registering
 // Manifest and ManifestList
